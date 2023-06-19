@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckxv5npm53qks"]
+
+[ext_resource type="Script" path="res://Scripts/board.gd" id="1_cf42k"]
+[ext_resource type="PackedScene" uid="uid://dst6p2dyo7r11" path="res://Scenes/wcell.tscn" id="2_s4rkj"]
+[ext_resource type="PackedScene" uid="uid://lvkxjsgp8165" path="res://Scenes/bcell.tscn" id="3_s7pns"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_cf42k")
+white_cell = ExtResource("2_s4rkj")
+black_cell = ExtResource("3_s7pns")
