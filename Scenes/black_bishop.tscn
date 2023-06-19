@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c16cqt48uk22q"]
+
+[ext_resource type="Texture2D" uid="uid://d10jy6mpalyfq" path="res://Sprites/black_bishop.png" id="1_meufr"]
+
+[node name="black_bishop" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_meufr")

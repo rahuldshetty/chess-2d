@@ -1,8 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://djuennjpsm74q"]
+[gd_scene load_steps=15 format=3 uid="uid://djuennjpsm74q"]
 
 [ext_resource type="PackedScene" uid="uid://ckxv5npm53qks" path="res://Scenes/board.tscn" id="1_4dulu"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_lpqw4"]
+[ext_resource type="PackedScene" uid="uid://dtjo323fohfu4" path="res://Scenes/white_pawn.tscn" id="2_em7t4"]
+[ext_resource type="PackedScene" uid="uid://crm1q08f757yd" path="res://Scenes/white_bishop.tscn" id="3_1vhf2"]
+[ext_resource type="PackedScene" uid="uid://cylrmm6idq5hh" path="res://Scenes/white_king.tscn" id="4_m08o0"]
+[ext_resource type="PackedScene" uid="uid://bvygvow32unhe" path="res://Scenes/white_knight.tscn" id="5_frd8r"]
+[ext_resource type="PackedScene" uid="uid://cfmfdf878u228" path="res://Scenes/white_queen.tscn" id="6_kxwfg"]
+[ext_resource type="PackedScene" uid="uid://ddd624ifhgik7" path="res://Scenes/white_rook.tscn" id="7_5r3xq"]
+[ext_resource type="PackedScene" uid="uid://cp07jh537xe8a" path="res://Scenes/black_pawn.tscn" id="8_ylx5a"]
+[ext_resource type="PackedScene" uid="uid://c16cqt48uk22q" path="res://Scenes/black_bishop.tscn" id="9_fmuni"]
+[ext_resource type="PackedScene" uid="uid://cw0ix8qayqrik" path="res://Scenes/black_king.tscn" id="10_o00iv"]
+[ext_resource type="PackedScene" uid="uid://cmha545u5ak18" path="res://Scenes/black_knight.tscn" id="11_ry0j8"]
+[ext_resource type="PackedScene" uid="uid://dkeawfwpt3wia" path="res://Scenes/black_queen.tscn" id="12_637fd"]
+[ext_resource type="PackedScene" uid="uid://bjawciqwd2cwh" path="res://Scenes/black_rook.tscn" id="13_wveql"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_lpqw4")
+white_pawn = ExtResource("2_em7t4")
+white_bishop = ExtResource("3_1vhf2")
+white_king = ExtResource("4_m08o0")
+white_knight = ExtResource("5_frd8r")
+white_queen = ExtResource("6_kxwfg")
+white_rook = ExtResource("7_5r3xq")
+black_pawn = ExtResource("8_ylx5a")
+black_bishop = ExtResource("9_fmuni")
+black_king = ExtResource("10_o00iv")
+black_knight = ExtResource("11_ry0j8")
+black_queen = ExtResource("12_637fd")
+black_rook = ExtResource("13_wveql")
 
 [node name="Board" parent="." instance=ExtResource("1_4dulu")]
 position = Vector2(256, 128)
+
+[node name="PieceLocation" type="Node2D" parent="Board"]

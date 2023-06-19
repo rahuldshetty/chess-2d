@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfmfdf878u228"]
+
+[ext_resource type="Texture2D" uid="uid://c506g0b2u0hvp" path="res://Sprites/white_queen.png" id="1_p5jx1"]
+
+[node name="white_queen" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_p5jx1")

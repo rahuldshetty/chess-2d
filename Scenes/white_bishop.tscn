@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://crm1q08f757yd"]
+
+[ext_resource type="Texture2D" uid="uid://bputk1qvb76fp" path="res://Sprites/white_bishop.png" id="1_so2ol"]
+
+[node name="white_bishop" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_so2ol")

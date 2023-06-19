@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvygvow32unhe"]
+
+[ext_resource type="Texture2D" uid="uid://x5eumbwmwy4d" path="res://Sprites/white_knight.png" id="1_iod1h"]
+
+[node name="white_knight" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_iod1h")

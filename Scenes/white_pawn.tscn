@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtjo323fohfu4"]
+
+[ext_resource type="Texture2D" uid="uid://dyh6dpnsx7n1a" path="res://Sprites/white_pawn.png" id="1_vu1jl"]
+
+[node name="white_pawn" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_vu1jl")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp07jh537xe8a"]
+
+[ext_resource type="Texture2D" uid="uid://egig8pvnyp8d" path="res://Sprites/black_pawn.png" id="1_puh4s"]
+
+[node name="black_pawn" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_puh4s")

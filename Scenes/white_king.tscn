@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cylrmm6idq5hh"]
+
+[ext_resource type="Texture2D" uid="uid://crrpyvpgqwlgx" path="res://Sprites/white_king.png" id="1_7b118"]
+
+[node name="white_king" type="TextureRect"]
+offset_right = 18.0
+offset_bottom = 19.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_7b118")
+expand_mode = 1

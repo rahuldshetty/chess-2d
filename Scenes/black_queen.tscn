@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkeawfwpt3wia"]
+
+[ext_resource type="Texture2D" uid="uid://c06l0fyboow87" path="res://Sprites/black_queen.png" id="1_2pq2q"]
+
+[node name="black_queen" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_2pq2q")

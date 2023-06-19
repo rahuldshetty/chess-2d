@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmha545u5ak18"]
+
+[ext_resource type="Texture2D" uid="uid://t57etgd63p6g" path="res://Sprites/black_knight.png" id="1_eyhq1"]
+
+[node name="black_knight" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_eyhq1")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjawciqwd2cwh"]
+
+[ext_resource type="Texture2D" uid="uid://dsab1mj3vbw2x" path="res://Sprites/black_rook.png" id="1_g8u57"]
+
+[node name="black_rook" type="TextureRect"]
+offset_right = 13.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+texture = ExtResource("1_g8u57")
