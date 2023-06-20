@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dst6p2dyo7r11"]
+[gd_scene load_steps=4 format=3 uid="uid://dst6p2dyo7r11"]
+
+[ext_resource type="Script" path="res://Scripts/wcell.gd" id="1_klc21"]
 
 [sub_resource type="Gradient" id="Gradient_e0f4p"]
 colors = PackedColorArray(0.803922, 1, 0.690196, 1, 0.803922, 1, 0.690196, 1)
@@ -8,7 +10,8 @@ gradient = SubResource("Gradient_e0f4p")
 
 [node name="wcell" type="TextureRect"]
 z_index = -10
-offset_right = 48.0
-offset_bottom = 48.0
+offset_right = 64.0
+offset_bottom = 64.0
 texture = SubResource("GradientTexture1D_d24qf")
 expand_mode = 1
+script = ExtResource("1_klc21")

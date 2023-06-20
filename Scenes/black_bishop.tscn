@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c16cqt48uk22q"]
+[gd_scene load_steps=3 format=3 uid="uid://cegh2epbv5fms"]
 
 [ext_resource type="Texture2D" uid="uid://d10jy6mpalyfq" path="res://Sprites/black_bishop.png" id="1_meufr"]
+[ext_resource type="Script" path="res://Scripts/black_bishop.gd" id="2_wsujh"]
 
 [node name="black_bishop" type="TextureRect"]
 offset_right = 13.0
 offset_bottom = 16.0
 scale = Vector2(3, 3)
 texture = ExtResource("1_meufr")
+script = ExtResource("2_wsujh")
