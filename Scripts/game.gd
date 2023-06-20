@@ -22,6 +22,9 @@ const COL_SIZE = 8
 const CELL_WIDTH = 64
 const CELL_HEIGHT = 64
 
+const X_OFFSET = 24
+const Y_OFFSET = 28
+
 
 func _ready():
 	load_fen_string(Global.GAME_STATE['board'])
@@ -47,8 +50,8 @@ func draw_cell(file, rank, cell):
 	
 	var piece = map_to_cell(cell).instantiate()
 
-	piece.position.x = file * CELL_WIDTH + 8
-	piece.position.y = rank * CELL_WIDTH + 4
+	piece.position.x = file * CELL_WIDTH + 8 + X_OFFSET
+	piece.position.y = rank * CELL_WIDTH + 4 + Y_OFFSET
 	
 	if is_instance_of(piece, Piece):
 		piece.rank = rank

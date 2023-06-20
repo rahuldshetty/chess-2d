@@ -1,9 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddd624ifhgik7"]
+[gd_scene load_steps=4 format=3 uid="uid://ddd624ifhgik7"]
 
 [ext_resource type="Texture2D" uid="uid://b25povg60liys" path="res://Sprites/white_rook.png" id="1_ewpqa"]
+[ext_resource type="Script" path="res://Scripts/white_rook.gd" id="2_w00nf"]
 
-[node name="white_rook" type="TextureRect"]
-offset_right = 13.0
-offset_bottom = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0byy6"]
+size = Vector2(14.3333, 20)
+
+[node name="white_rook" type="Sprite2D"]
 scale = Vector2(3, 3)
 texture = ExtResource("1_ewpqa")
+script = ExtResource("2_w00nf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.166667, -4.76837e-07)
+shape = SubResource("RectangleShape2D_0byy6")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ddd624ifhgik7" path="res://Scenes/white_rook.tscn" id="7_5r3xq"]
 [ext_resource type="PackedScene" uid="uid://iejg4265ljad" path="res://Scenes/black_pawn.tscn" id="8_ylx5a"]
 [ext_resource type="PackedScene" uid="uid://cegh2epbv5fms" path="res://Scenes/black_bishop.tscn" id="9_fmuni"]
-[ext_resource type="PackedScene" uid="uid://cw0ix8qayqrik" path="res://Scenes/black_king.tscn" id="10_o00iv"]
+[ext_resource type="PackedScene" uid="uid://iipjabljx3s1" path="res://Scenes/black_king.tscn" id="10_o00iv"]
 [ext_resource type="PackedScene" uid="uid://cmha545u5ak18" path="res://Scenes/black_knight.tscn" id="11_ry0j8"]
 [ext_resource type="PackedScene" uid="uid://dkeawfwpt3wia" path="res://Scenes/black_queen.tscn" id="12_637fd"]
 [ext_resource type="PackedScene" uid="uid://bjawciqwd2cwh" path="res://Scenes/black_rook.tscn" id="13_wveql"]

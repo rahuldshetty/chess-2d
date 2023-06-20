@@ -30,7 +30,7 @@ func draw_cell(x, y, color):
 	piece.position.y = col
 	piece.size.x = CELL_WIDTH
 	piece.size.y = CELL_HEIGHT
-	add_child(piece)		
+	add_child(piece)
 
 func draw_board():
 	for i in range(ROW_SIZE):

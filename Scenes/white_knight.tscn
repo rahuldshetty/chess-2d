@@ -1,9 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvygvow32unhe"]
+[gd_scene load_steps=4 format=3 uid="uid://bvygvow32unhe"]
 
 [ext_resource type="Texture2D" uid="uid://x5eumbwmwy4d" path="res://Sprites/white_knight.png" id="1_iod1h"]
+[ext_resource type="Script" path="res://Scripts/white_knight.gd" id="2_qcyml"]
 
-[node name="white_knight" type="TextureRect"]
-offset_right = 13.0
-offset_bottom = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dybse"]
+size = Vector2(16.3333, 18.3333)
+
+[node name="white_knight" type="Sprite2D"]
 scale = Vector2(3, 3)
 texture = ExtResource("1_iod1h")
+script = ExtResource("2_qcyml")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.166667, -0.166667)
+shape = SubResource("RectangleShape2D_dybse")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

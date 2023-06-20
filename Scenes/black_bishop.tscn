@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cegh2epbv5fms"]
+[gd_scene load_steps=4 format=3 uid="uid://cegh2epbv5fms"]
 
 [ext_resource type="Texture2D" uid="uid://d10jy6mpalyfq" path="res://Sprites/black_bishop.png" id="1_meufr"]
 [ext_resource type="Script" path="res://Scripts/black_bishop.gd" id="2_wsujh"]
 
-[node name="black_bishop" type="TextureRect"]
-offset_right = 13.0
-offset_bottom = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m31d7"]
+size = Vector2(18.3333, 19.3333)
+
+[node name="black_bishop" type="Sprite2D"]
 scale = Vector2(3, 3)
 texture = ExtResource("1_meufr")
 script = ExtResource("2_wsujh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.166667, -4.76837e-07)
+shape = SubResource("RectangleShape2D_m31d7")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

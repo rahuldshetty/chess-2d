@@ -1,9 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkeawfwpt3wia"]
+[gd_scene load_steps=4 format=3 uid="uid://dkeawfwpt3wia"]
 
 [ext_resource type="Texture2D" uid="uid://c06l0fyboow87" path="res://Sprites/black_queen.png" id="1_2pq2q"]
+[ext_resource type="Script" path="res://Scripts/black_queen.gd" id="2_m31dw"]
 
-[node name="black_queen" type="TextureRect"]
-offset_right = 13.0
-offset_bottom = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m7r7"]
+size = Vector2(16, 18.3333)
+
+[node name="black_queen" type="Sprite2D"]
 scale = Vector2(3, 3)
 texture = ExtResource("1_2pq2q")
+script = ExtResource("2_m31dw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.19209e-07, 0.166667)
+shape = SubResource("RectangleShape2D_5m7r7")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
