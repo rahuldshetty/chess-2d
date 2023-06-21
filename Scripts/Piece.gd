@@ -12,6 +12,15 @@ func _ready():
 	original_position = [
 		position.x, position.y
 	]
+	
+func check_whether_current_mouse_pos_is_valid_cell():
+	var x = position.x - Global.X_OFFSET
+	var y = position.y - Global.Y_OFFSET
+	var file = ((Global.CELL_WIDTH * Global.COL_SIZE - Global.X_OFFSET) - x) / Global.CELL_WIDTH 
+	var rank = ((Global.CELL_HEIGHT * Global.ROW_SIZE - Global.Y_OFFSET) - y) / Global.CELL_HEIGHT
+	print("File:", file)
+	print("Rank:", file)
+	
 
 func handle_mouse_press(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -20,6 +29,7 @@ func handle_mouse_press(event):
 		else:
 			position.x = original_position[0]
 			position.y = original_position[1]
+			check_whether_current_mouse_pos_is_valid_cell()
 			mouse_pressed = false
 
 func _process(_delta):

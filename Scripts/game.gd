@@ -16,16 +16,6 @@ extends Node2D
 
 @onready var cell_position:Node2D = $Board/PieceLocation
 
-const ROW_SIZE = 8
-const COL_SIZE = 8
-
-const CELL_WIDTH = 64
-const CELL_HEIGHT = 64
-
-const X_OFFSET = 24
-const Y_OFFSET = 28
-
-
 func _ready():
 	load_fen_string(Global.GAME_STATE['board'])
 	
@@ -50,8 +40,8 @@ func draw_cell(file, rank, cell):
 	
 	var piece = map_to_cell(cell).instantiate()
 
-	piece.position.x = file * CELL_WIDTH + 8 + X_OFFSET
-	piece.position.y = rank * CELL_WIDTH + 4 + Y_OFFSET
+	piece.position.x = file * Global.CELL_WIDTH + 8 + Global.X_OFFSET
+	piece.position.y = rank * Global.CELL_WIDTH + 4 + Global.Y_OFFSET
 	
 	if is_instance_of(piece, Piece):
 		piece.rank = rank
