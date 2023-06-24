@@ -46,6 +46,7 @@ func draw_cell(file, rank, cell):
 	if is_instance_of(piece, Piece):
 		piece.rank = rank
 		piece.file = file
+		piece.is_white = (cell >= "A" and cell <= "Z")
 	
 	cell_position.add_child(piece)
 	

@@ -15,6 +15,8 @@ const BOARD_OFFSET_X = 256
 const BOARD_OFFSET_Y = 128
 
 
+var is_whites_turn = 1
+
 var GAME_STATE = {
 	"board": starting_position
 }
