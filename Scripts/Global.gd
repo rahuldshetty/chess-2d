@@ -2,6 +2,10 @@ extends Node
 
 const starting_position = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
+var BLACK_CELL_COLOR = Color.from_string("#057137", "#000000")
+var WHITE_CELL_COLOR = Color.from_string("#cdffb0", "#FFFFFF")
+var POS_CHANGE_COLOR = Color.from_string("#ffe599", "#0f0f0f")
+
 const ROW_SIZE = 8
 const COL_SIZE = 8
 

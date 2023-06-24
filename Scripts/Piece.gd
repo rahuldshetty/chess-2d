@@ -11,7 +11,7 @@ var history = []
 
 func _ready():
 	var original_position = [
-		position.x, position.y
+		position.x, position.y, file, rank
 	]
 	history.append(original_position)
 	
@@ -47,7 +47,7 @@ func handle_mouse_press(event):
 				position.y = ( Global.ROW_SIZE - 1 - validity['rank']) * Global.CELL_WIDTH + 4 + Global.Y_OFFSET
 				Global.is_whites_turn = not Global.is_whites_turn
 				history.append(
-					[position.x, position.y]
+					[position.x, position.y, validity['file'], Global.ROW_SIZE - 1 - validity['rank']]
 				)
 			mouse_pressed = false
 
