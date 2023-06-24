@@ -11,6 +11,10 @@ const CELL_HEIGHT = 64
 const X_OFFSET = 24
 const Y_OFFSET = 28
 
+const BOARD_OFFSET_X = 256
+const BOARD_OFFSET_Y = 128
+
+
 var GAME_STATE = {
 	"board": starting_position
 }
