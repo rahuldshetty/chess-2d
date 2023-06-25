@@ -23,7 +23,15 @@ func check_whether_current_mouse_pos_is_valid_cell():
 	loc_rank = ( Global.ROW_SIZE - 1 - loc_rank)
 	# print("File:", char(file + 65), " ", file)
 	# print("Rank:", rank)
-	if not (history[-1][2] == loc_file and history[-1][3] == loc_rank) and ((is_white and Global.is_whites_turn) or (not is_white and not Global.is_whites_turn)) and (loc_file >= 0 and loc_file < Global.COL_SIZE and loc_rank >= 0 and loc_rank < Global.ROW_SIZE):
+	if not (history[-1][2] == loc_file and history[-1][3] == loc_rank) \
+		and (
+				(is_white and Global.is_whites_turn) 
+				or 
+				(not is_white and not Global.is_whites_turn)
+		) and (
+			loc_file >= 0 and loc_file < Global.COL_SIZE 
+				and 
+			loc_rank >= 0 and loc_rank < Global.ROW_SIZE):
 		return {
 			"valid": true,
 			"file": loc_file,
