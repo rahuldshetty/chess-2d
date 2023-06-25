@@ -11,6 +11,12 @@ enum Cell {
 func _ready():
 	draw_board()
 
+func _draw():
+	draw_yellow_cells()
+
+func _process(_delta):
+	queue_redraw()
+	
 func draw_cell(x, y, color):
 	var row = x * Global.CELL_WIDTH
 	var col = y * Global.CELL_HEIGHT
@@ -24,6 +30,9 @@ func draw_cell(x, y, color):
 	piece.position.y = col
 	piece.size.x = Global.CELL_WIDTH
 	piece.size.y = Global.CELL_HEIGHT
+	
+	Global.GAME_STATE['cells'].append(piece)
+	
 	add_child(piece)
 
 func draw_board():
@@ -34,4 +43,22 @@ func draw_board():
 				draw_cell(i, j, Cell.WHITE)
 			else:
 				draw_cell(i, j, Cell.BLACK)
+
+
+func draw_yellow_cells():
+	if len(Global.GAME_STATE['last_moved_cells']) == 2:
+		for move_coordinate in Global.GAME_STATE['last_moved_cells']:
+			var row = move_coordinate[0] * Global.CELL_WIDTH
+			var col = move_coordinate[1] * Global.CELL_HEIGHT
+			
+			draw_rect(
+				Rect2(
+					col, 
+					row, 
+					Global.CELL_WIDTH, 
+					Global.CELL_HEIGHT
+				), 
+				Global.POS_CHANGE_COLOR, 
+				true
+			)
 
